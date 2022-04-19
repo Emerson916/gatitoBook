@@ -22,6 +22,10 @@ form {
 }
 
 .container-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input {
@@ -31,6 +35,15 @@ input {
   border-radius: 20px;
   padding: 20px;
   margin: 10px;
+}
+
+app-mensagem {
+  width: 70%;
+  padding-left: 10px;
+  text-align: start;
+  color: rgb(160, 0, 0);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {

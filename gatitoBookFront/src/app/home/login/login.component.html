@@ -4,21 +4,22 @@
   <form (ngSubmit)="login()">
     <div class="container-input">
       <input
-        class=""
         placeholder="Nome do usuário"
         [(ngModel)]="usuario"
         name="usuario"
         #campoUsuario="ngModel"
         required
       />
-      <app-mensagem *ngIf="campoUsuario.invalid" mensagem="Usuário obrigatório">
+      <app-mensagem
+        *ngIf="campoUsuario.invalid"
+        mensagem="Usuário obrigatório!"
+      >
       </app-mensagem>
     </div>
 
-    <div class="">
+    <div class="container-input">
       <input
         type="password"
-        class=""
         placeholder="Senha"
         [(ngModel)]="senha"
         name="senha"
@@ -27,7 +28,7 @@
       />
       <app-mensagem
         *ngIf="campoSenha.invalid"
-        mensagem="Senha obrigatória"
+        mensagem="Senha obrigatória!"
       ></app-mensagem>
     </div>
 

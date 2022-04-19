@@ -1,8 +1,13 @@
 <div class="container">
-  <h1 class="title">Faça seu login</h1>
+  <img src="assets/img/logo.svg" alt="Imagem da logo" />
 
   <form (ngSubmit)="login()">
     <div class="container-input">
+      <app-mensagem
+        *ngIf="campoUsuario.invalid"
+        mensagem="Usuário obrigatório!"
+      >
+      </app-mensagem>
       <input
         placeholder="Nome do usuário"
         [(ngModel)]="usuario"
@@ -10,14 +15,13 @@
         #campoUsuario="ngModel"
         required
       />
-      <app-mensagem
-        *ngIf="campoUsuario.invalid"
-        mensagem="Usuário obrigatório!"
-      >
-      </app-mensagem>
     </div>
 
     <div class="container-input">
+      <app-mensagem
+        *ngIf="campoSenha.invalid"
+        mensagem="Senha obrigatória!"
+      ></app-mensagem>
       <input
         type="password"
         placeholder="Senha"
@@ -26,12 +30,8 @@
         #campoSenha="ngModel"
         required
       />
-      <app-mensagem
-        *ngIf="campoSenha.invalid"
-        mensagem="Senha obrigatória!"
-      ></app-mensagem>
     </div>
 
-    <button type="submit" class="">Login</button>
+    <button type="submit">Login</button>
   </form>
 </div>

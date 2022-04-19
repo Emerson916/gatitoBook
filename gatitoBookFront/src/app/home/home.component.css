@@ -1,7 +1,24 @@
 .container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
+}
+
+.container-wellcome {
+  flex: 1;
+  background: linear-gradient(170deg, #00b0ff 10%, #174f68 100%);
+}
+
+.message-wellcome {
+  height: 300px;
+  padding: 0px 100px;
+  line-height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
 }
 
 .containerImg {

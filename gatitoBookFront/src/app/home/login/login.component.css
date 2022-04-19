@@ -2,17 +2,12 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #00b0ff;
   justify-content: center;
   align-items: center;
 }
 
-.title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 32px;
-  text-align: center;
-  color: #fff;
-  margin: 20px auto;
+img {
+  margin: 40px;
 }
 
 form {
@@ -31,8 +26,8 @@ form {
 input {
   width: 70%;
   height: 60px;
-  border: 1px solid #050d3a;
-  border-radius: 20px;
+  border: 2px solid #174F68;
+  border-radius: 10px;
   padding: 20px;
   margin: 10px;
 }
@@ -41,17 +36,17 @@ app-mensagem {
   width: 70%;
   padding-left: 10px;
   text-align: start;
-  color: rgb(160, 0, 0);
+  color: #000;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
-  width: 70%;
+  width: 30%;
   height: 60px;
-  border-radius: 20px;
+  border-radius: 60px;
   border: none;
-  background-color: #050d3a;
+  background-color: #00B0FF;
   color: #fff;
   font-size: 18px;
   margin-top: 50px;

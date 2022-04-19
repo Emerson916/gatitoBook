@@ -31,9 +31,11 @@
         required
       />
     </div>
-
-    <p>Não possui uma conta ?,<a [routerLink]="['register']">Cadastre-se</a></p>
+    <div class="link">
+      <p>
+        Não possui uma conta ?<a [routerLink]="['register']">Cadastre-se</a>
+      </p>
+    </div>
     <button type="submit" [disabled]="loginForm.invalid">Login</button>
   </form>
-
 </div>

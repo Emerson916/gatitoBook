@@ -33,7 +33,7 @@ input {
 }
 
 app-mensagem {
-  width: 70%;
+  width: 100%;
   padding-left: 10px;
   text-align: start;
   color: #ff0000;

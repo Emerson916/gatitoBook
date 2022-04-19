@@ -3,10 +3,31 @@
 
   <form [formGroup]="newUserForm" (submit)="cadastrar()">
     <div>
+      <app-mensagem
+        mensagem="Email obrigatório"
+        *ngIf="
+          newUserForm.get('email')?.errors?.['required'] &&
+          newUserForm.get('email')?.touched
+        "
+      ></app-mensagem>
+      <app-mensagem
+        mensagem="Email com formato incorreto"
+        *ngIf="
+          newUserForm.get('email')?.errors?.['email'] &&
+          newUserForm.get('email')?.touched
+        "
+      ></app-mensagem>
       <input placeholder="Digite seu e-mail" formControlName="email" />
     </div>
 
     <div>
+      <app-mensagem
+        mensagem="Nome incorreto"
+        *ngIf="
+          newUserForm.get('fullName')?.errors &&
+          newUserForm.get('fullName')?.touched
+        "
+      ></app-mensagem>
       <input
         placeholder="Digite seu nome completo"
         formControlName="fullName"

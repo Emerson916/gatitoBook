@@ -14,7 +14,9 @@
 
 form {
   width: 70%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 }
 
 .container-input {
@@ -32,14 +34,14 @@ input {
   margin: 10px;
 }
 
-/* app-mensagem {
-  width: 70%;
-  padding-left: 10px;
-  text-align: start;
+app-mensagem {
+  width: 100%;
   color: #ff0000;
+  text-align: start;
   font-size: 20px;
+  margin-left: 20px;
   font-family: Arial, Helvetica, sans-serif;
-} */
+}
 
 .link {
   display: flex;
@@ -47,6 +49,7 @@ input {
 }
 
 p {
+  text-align: center;
   display: flex;
   flex-direction: column;
   font-size: 20px;
@@ -60,6 +63,7 @@ a {
 
 button {
   width: 30%;
+  margin: auto;
   height: 60px;
   border-radius: 60px;
   border: none;

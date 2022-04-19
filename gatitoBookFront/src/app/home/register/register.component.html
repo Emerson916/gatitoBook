@@ -1,21 +1,31 @@
 <div class="container">
   <h4 class="titulo">Registre-se e mostre seu pet ao mundo!!</h4>
 
-  <form>
+  <form [formGroup]="newUserForm" (submit)="cadastrar()">
     <div>
-      <input placeholder="Digite seu e-mail" />
+      <input placeholder="Digite seu e-mail" formControlName="email" />
     </div>
 
     <div>
-      <input placeholder="Digite seu nome completo" />
+      <input
+        placeholder="Digite seu nome completo"
+        formControlName="fullName"
+      />
     </div>
 
     <div>
-      <input placeholder="Digite seu nome de usuário" />
+      <input
+        placeholder="Digite seu nome de usuário"
+        formControlName="userName"
+      />
     </div>
 
     <div>
-      <input placeholder="Digite sua senha" type="password" />
+      <input
+        placeholder="Digite sua senha"
+        type="password"
+        formControlName="password"
+      />
     </div>
     <div class="link">
       <p>Já possui uma conta ? <a [routerLink]="['']">Faça login</a></p>

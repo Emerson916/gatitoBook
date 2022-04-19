@@ -1,0 +1,62 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+form {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.container-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 70%;
+  height: 60px;
+  border: 2px solid #174F68;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* app-mensagem {
+  width: 70%;
+  padding-left: 10px;
+  text-align: start;
+  color: #ff0000;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+button {
+  width: 30%;
+  height: 60px;
+  border-radius: 60px;
+  border: none;
+  background-color: #00B0FF;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #00B0FF;
+  border: 2px solid #00B0FF;
+}

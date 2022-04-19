@@ -8,7 +8,11 @@
         placeholder="Nome do usuário"
         [(ngModel)]="usuario"
         name="usuario"
+        #campoUsuario="ngModel"
+        required
       />
+      <app-mensagem *ngIf="campoUsuario.invalid" mensagem="Usuário obrigatório">
+      </app-mensagem>
     </div>
 
     <div class="">
@@ -18,7 +22,13 @@
         placeholder="Senha"
         [(ngModel)]="senha"
         name="senha"
+        #campoSenha="ngModel"
+        required
       />
+      <app-mensagem
+        *ngIf="campoSenha.invalid"
+        mensagem="Senha obrigatória"
+      ></app-mensagem>
     </div>
 
     <button type="submit" class="">Login</button>

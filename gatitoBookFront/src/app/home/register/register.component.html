@@ -22,9 +22,16 @@
 
     <div>
       <app-mensagem
-        mensagem="Nome incorreto"
+        mensagem="Nome obrigatório"
         *ngIf="
-          newUserForm.get('fullName')?.errors &&
+          newUserForm.get('fullName')?.errors?.['required'] &&
+          newUserForm.get('fullName')?.touched
+        "
+      ></app-mensagem>
+      <app-mensagem
+        mensagem="Nome incorreto!!"
+        *ngIf="
+          newUserForm.get('fullName')?.errors?.['fullName'] &&
           newUserForm.get('fullName')?.touched
         "
       ></app-mensagem>
@@ -35,6 +42,11 @@
     </div>
 
     <div>
+      <app-mensagem
+        mensagem="Usuário deve ser em letra minúscula"
+        *ngIf="newUserForm.get('userName')?.errors?.['minusculo'] &&
+         newUserForm.get('userName')?.touched"
+      ></app-mensagem>
       <input
         placeholder="Digite seu nome de usuário"
         formControlName="userName"

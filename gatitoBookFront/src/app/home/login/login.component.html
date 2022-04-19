@@ -1,10 +1,10 @@
 <div class="container">
   <img src="assets/img/logo.svg" alt="Imagem da logo" />
 
-  <form (ngSubmit)="login()">
+  <form (ngSubmit)="login()" #loginForm="ngForm">
     <div class="container-input">
       <app-mensagem
-        *ngIf="campoUsuario.invalid"
+        *ngIf="campoUsuario.invalid && campoUsuario.touched"
         mensagem="Usuário obrigatório!"
       >
       </app-mensagem>
@@ -19,7 +19,7 @@
 
     <div class="container-input">
       <app-mensagem
-        *ngIf="campoSenha.invalid"
+        *ngIf="campoSenha.invalid && campoSenha.touched"
         mensagem="Senha obrigatória!"
       ></app-mensagem>
       <input
@@ -32,6 +32,6 @@
       />
     </div>
 
-    <button type="submit">Login</button>
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
   </form>
 </div>

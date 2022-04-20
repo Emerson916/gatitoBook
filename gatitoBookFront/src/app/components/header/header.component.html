@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <a>GatitoBook</a>
+    <img src="../../../assets/img/logo-outline.svg" />
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login">
         <i></i>
@@ -12,7 +12,12 @@
 
   <ng-template #login>
     <span>
-      <a [routerLink]="['']">Login</a>
+      <a class="login-container" [routerLink]="['']"
+        ><img
+          class="user-login"
+          src="../../../assets/img/user-login.svg"
+        />Login</a
+      >
     </span>
   </ng-template>
 </header>

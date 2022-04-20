@@ -15,6 +15,7 @@ import { MensagemModule } from '../components/mensagem/mensagem.module';
     FormsModule,
     MensagemModule,
     ReactiveFormsModule,
+
   ],
   exports: [HomeComponent],
 })

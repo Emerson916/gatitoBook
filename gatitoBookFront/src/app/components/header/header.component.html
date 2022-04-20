@@ -1,11 +1,18 @@
 <header>
   <nav>
-    <img src="../../../assets/img/logo-outline.svg" />
+    <img
+      class="logo"
+      src="../../../assets/img/logo-outline.svg"
+      alt="Logo do gatito book"
+    />
     <div *ngIf="user$ | async as user">
-      <div *ngIf="user.name; else login">
-        <i></i>
-        <a>{{ user.name }}</a>
-        <a (click)="logout()">Logout</a>
+      <div class="user" *ngIf="user.name; else login">
+        <a class="user-name">Olá, {{ user.name }}</a>
+        <a (click)="logout()"
+          ><img
+            src="../../../assets/img/logout.png"
+            alt="icon para sair do app"
+        /></a>
       </div>
     </div>
   </nav>

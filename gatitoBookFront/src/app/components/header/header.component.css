@@ -3,15 +3,34 @@ header {
   background-color: #00b0ff;
 }
 
+img {
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   padding: 5px 20px;
 }
 
-img {
+.logo {
   width: 90px;
   height: 90px;
+}
+
+.user {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-name {
+  margin: 10px;
 }
 
 .login-container {

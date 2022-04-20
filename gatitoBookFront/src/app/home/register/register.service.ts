@@ -11,4 +11,8 @@ export class RegisterService {
   registerNewUser(newUser: Register) {
     return this.http.post('http://localhost:3000/user/signup', newUser);
   }
+
+  checkExistingUser(userName: string) {
+    return this.http.get(`http://localhost:3000/user/exits/${userName}`);
+  }
 }

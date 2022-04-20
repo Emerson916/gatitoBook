@@ -5,6 +5,7 @@ import { minusculoValidator } from './minusculo.validator';
 import { Register } from './register';
 import { RegisterService } from './register.service';
 import { usuarioSenhaIguaisValidator } from './usuario-senha-iguais.validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private registerService: RegisterService,
-    private existingUserService: ExistingUserService
+    private existingUserService: ExistingUserService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -39,7 +41,16 @@ export class RegisterComponent implements OnInit {
   }
 
   cadastrar() {
-    const newUser = this.newUserForm.getRawValue() as Register;
-    console.log(newUser);
+    if (this.newUserForm.valid) {
+      const newUser = this.newUserForm.getRawValue() as Register;
+      this.registerService.registerNewUser(newUser).subscribe(
+        () => {
+          this.router.navigate(['']);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }
   }
 }

@@ -13,6 +13,6 @@ export class RegisterService {
   }
 
   checkExistingUser(userName: string) {
-    return this.http.get(`http://localhost:3000/user/exits/${userName}`);
+    return this.http.get(`http://localhost:3000/user/exists/${userName}`);
   }
 }

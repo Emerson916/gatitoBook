@@ -7,7 +7,7 @@
     />
     <div *ngIf="user$ | async as user">
       <div class="user" *ngIf="user.name; else login">
-        <a class="user-name">Olá, {{ user.name }}</a>
+        <a>Olá, {{ user.name }}</a>
         <a (click)="logout()"
           ><img
             src="../../../assets/img/logout.png"

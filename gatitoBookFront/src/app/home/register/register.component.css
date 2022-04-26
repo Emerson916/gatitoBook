@@ -14,9 +14,7 @@
 
 form {
   width: 70%;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
+  text-align: center;
 }
 
 .container-input {
@@ -62,20 +60,17 @@ a {
 }
 
 button {
-  width: 30%;
-  margin: auto;
-  height: 60px;
-  border-radius: 60px;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
   border: none;
   background-color: #00b0ff;
   color: #fff;
   font-size: 18px;
-  margin-top: 50px;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 button:hover {
-  cursor: pointer;
-  background-color: #fff;
-  color: #00b0ff;
-  border: 2px solid #00b0ff;
+  opacity: 0.9;
 }

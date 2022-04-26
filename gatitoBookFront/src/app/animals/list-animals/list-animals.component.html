@@ -1,8 +1,8 @@
 <app-header></app-header>
 <menu *ngIf="user$ | async as user">
-  <!-- <div *ngIf="user.name; else login"> -->
+  <div *ngIf="user.name; else login">
     <img
-      src="https://avatars.githubusercontent.com/u/77053593?v=4"
+      src="../../../assets/img/user.svg"
       alt="Imagem de Perfil"
       class="img-perfil"
     />
@@ -13,12 +13,19 @@
       <img class="redes-social" src="../../../assets/img/email.svg" />
       <img class="redes-social" src="../../../assets/img/github.svg" />
     </div>
-  <!-- </div> -->
+  </div>
 </menu>
 
-<ng-component #login>
+<ng-template #login>
   <span>
-    <p>Você não esta conectado com sua conta,<a [routerLink]="['']">conecte-se</a></p>
+    <img
+      src="../../../assets/img/user.svg"
+      alt="Imagem de Perfil"
+      class="img-not-login"
+    />
+
+    <p>Você não esta conectado com sua conta</p>
+    <a [routerLink]="['']">Fazer Login</a>
   </span>
-</ng-component>
+</ng-template>
 <app-rodape></app-rodape>

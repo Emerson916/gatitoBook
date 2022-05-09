@@ -32,17 +32,15 @@ const upload = multer({
   },
 });
 
+app.set("secret", "your secret phrase here");
+app.set("upload", upload);
+
 const corsOptions = {
   exposedHeaders: ["x-access-token"],
 };
 
-app.use(cors(corsOptions));
-
-app.set("secret", "your secret phrase here");
-app.set("upload", upload);
-
-
 app.use(express.static("uploads"));
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {

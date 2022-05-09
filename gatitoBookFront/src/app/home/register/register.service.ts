@@ -9,10 +9,10 @@ export class RegisterService {
   constructor(private http: HttpClient) {}
 
   registerNewUser(newUser: Register) {
-    return this.http.post('http://localhost:3000/user/signup', newUser);
+    return this.http.post('gatitobook-production-e0c7.up.railway.app/user/signup', newUser);
   }
 
   checkExistingUser(userName: string) {
-    return this.http.get(`http://localhost:3000/user/exists/${userName}`);
+    return this.http.get(`gatitobook-production-e0c7.up.railway.app/user/exists/${userName}`);
   }
 }

@@ -6,7 +6,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root',
 })
 export class AutenticacaoService {
-  private url = 'http://localhost:3000/user/login';
+  private url = 'gatitobook-production-e0c7.up.railway.app/user/login';
 
   constructor(
     private httpClient: HttpClient,

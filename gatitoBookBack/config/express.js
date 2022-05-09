@@ -40,7 +40,7 @@ app.set("upload", upload);
 // };
 
 app.use(express.static("uploads"));
-// app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
